@@ -31,7 +31,7 @@ pipeline {
 
     stage('Execute Ansible playbook') {
       steps {
-        ansiblePlaybook 'copy_jar_file.yml'
+        ansiblePlaybook 'spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar'
       }
     }
 
@@ -56,9 +56,9 @@ pipeline {
                 patternSeparator: '[, ]+',
                 remoteDirectory: '/home/vboxuser/',
                 remoteDirectorySDF: false,
-                remoteFiles: 'your_jar_file.jar',
+                remoteFiles: 'spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar',
                 removePrefix: '',
-                sourceFiles: 'your_jar_file.jar'
+                sourceFiles: 'spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar'
               )
             ]
           )
@@ -98,7 +98,7 @@ pipeline {
                 sshTransfer(
                   cleanRemote: false,
                   excludes: '',
-                  execCommand: 'sudo cp /home/vboxuser/your_jar_file.jar /opt/your_service_directory/',
+                  execCommand: 'sudo cp /home/vboxuser/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar /opt/your_service_directory/',
                   flatten: false,
                   makeEmptyDirs: false,
                   noDefaultExcludes: false,
