@@ -25,7 +25,7 @@ pipeline {
 
     stage('Checkout') {
       steps {
-        git(branch: 'main', credentialsId: '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', url: 'https://github.com/JosephLeighton333/spring-petclinic.git')
+        git(branch: 'main', credentialsId: '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', url: 'https://github.com/JosephLeighton333/spring-petclinic.git')
       }
     }
 
