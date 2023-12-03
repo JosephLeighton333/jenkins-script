@@ -43,23 +43,23 @@ pipeline {
           sshPublisher(
             sshPublisherDesc: [
               configName: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC9sUdZBe6cvs5/IFXBBxRR/WLZhwOy5X/NuQWQwmqVeglts01hzNm1JcEY08LjWNQtrPy8OBGOZbY9mTK06LD4ReI4CMC3kVrt9YE7+f+F1RvTByYp8eFrKSTirDX1LNrsLFdAyoWRl8LsDdrebY1Rh+T3iv9g9hnhbdGygaBt1w5KdoEmUE1+S9UjGl0s/ux7hJ5RK1EgyuLSMfQyzmkSL4MLwFpUNIwGq0ZkkPSrkX2VFmqcNiUdlUfeSn6HJffRuqu4rBFqxWSL82xvkq4cwrYC5leirbw3r/gj24OSvcrsq+Atxc5jBPMXk0bxE8fjrgBWWdgzRu1P7cRsA6itpsW/bHP566G+o1XfC+vS0N6SW49WHcMLU6FJUp7LzS3YA8TTvZHEwGHuexSYw1dLXLhw/JB6WcZxoxCFveVy8jLweOzxF8Efh95k0EVxn3m5DFSjtq8VZyPlMj8I6qt6sgwh+//erd4GkWg72AtrZLqzw81qUgU5V31T9qYmXlk= vboxuser@WebServer',
-              hostname: "WebServer",
-              transfers: [
-                sshTransfer(
-                  cleanRemote: false,
-                  excludes: '',
-                  execCommand: '',
-                  flatten: false,
-                  makeEmptyDirs: false,
-                  noDefaultExcludes: false,
-                  patternSeparator: '[, ]+',
-                  remoteDirectory: '/home/vboxuser/',
-                  remoteDirectorySDF: false,
-                  remoteFiles: 'spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar',
-                  removePrefix: '',
-                  sourceFiles: 'spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar'
-                )
-              ]
+              hostname: "WebServer"
+            ],
+            transfers: [
+              sshTransfer(
+                cleanRemote: false,
+                excludes: '',
+                execCommand: '',
+                flatten: false,
+                makeEmptyDirs: false,
+                noDefaultExcludes: false,
+                patternSeparator: '[, ]+',
+                remoteDirectory: '/home/vboxuser/',
+                remoteDirectorySDF: false,
+                remoteFiles: 'spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar',
+                removePrefix: '',
+                sourceFiles: 'spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar'
+              )
             ]
           )
         }
