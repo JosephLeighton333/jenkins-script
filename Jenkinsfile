@@ -38,7 +38,7 @@ pipeline {
     stage('Transfer jar file') {
       steps {
         script {
-          def servers = ['192.168.56.101']
+          def servers = ['10.0.2.4']
           servers.each { server ->
           sshPublisher(
             sshPublisherDesc: [
