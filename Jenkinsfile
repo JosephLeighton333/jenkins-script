@@ -38,7 +38,7 @@ pipeline {
     stage('Transfer jar file') {
       steps {
         script {
-          def servers = ['10.0.2.4']
+          def servers = ['vboxuser@10.0.2.4']
           servers.each { server ->
           sshPublisher(
             sshPublisherDesc: [
@@ -76,7 +76,7 @@ pipeline {
   stage('Deploy jar file') {
     steps {
       script {
-        def servers = ['10.0.2.4']
+        def servers = ['vboxuser@10.0.2.4']
         servers.each { server ->
         sshPublisher(
           sshPublisherDesc: [
