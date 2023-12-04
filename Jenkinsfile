@@ -31,6 +31,7 @@ pipeline {
 
     stage('Execute Ansible playbook') {
       steps {
+        ansiblePlaybook 'hosts'
         ansiblePlaybook 'copy_jar_file.yml'
       }
     }
