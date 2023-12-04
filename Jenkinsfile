@@ -25,7 +25,7 @@ pipeline {
 
     stage('Checkout') {
       steps {
-        git(branch: 'main', credentialsId: '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', url: 'https://github.com/JosephLeighton333/ansible.git')
+        git(branch: 'main', credentialsId: 'GitHubID', url: 'https://github.com/JosephLeighton333/ansible.git')
       }
     }
 
